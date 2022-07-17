@@ -1,0 +1,142 @@
+.navbar-top{
+  background-color: #f8f8fb!important;
+  height: 75px;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.contact{
+  border: 3px solid #005482;
+  color: #178ec9!important;
+  text-align: center;
+  width: 180px;
+  border-radius: 10px;
+  height: 45px;
+}
+.contact:hover{
+  background-color: #005482;
+  color: #fff!important;
+}
+.connect{
+  background-color: #005482;
+  color: #fff!important;
+  text-align: center;
+  width: 180px;
+  border-radius: 10px;
+  height: 45px;
+}
+.connect:hover{
+  background-color: #fff!important;
+  border: 3px solid #005482;
+  color: #178ec9!important;
+  text-align: center;
+  width: 180px;
+}
+.navbar-brand{
+  font-weight: bold;
+  font-size: 40px;
+}
+.footer{
+  background-color: #000f21;
+  height: 370px;
+  width: 100%;
+}
+.css-4dny50 {
+  margin: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-bottom-width: thin;
+  border-color: #dedede;
+}
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+}
+.conta{
+  background-color: #e6f0f8;
+  height: 530px;
+}
+.room{
+  background-color: #f3f4f6;
+  height: 1200px;
+}
+.blog{
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #f8f8fb;
+  height: 900px;
+
+}
+
+.ima{
+  border: 3px solid #f7f7fa;
+  border-radius: 12px;
+}
+.owl-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ddd !important;
+  background-repeat: no-repeat;
+}
+.active{
+  background-color: #fff!important;
+}
+.job{
+  background-color: #f8f8fb;
+  height: 500px;
+}
+
+.servo{
+  background-color: #fff;
+  height: 950px;
+}
+.blsere{
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #5e5e64;
+  height: 300px;
+}
+.blsere:hover{
+  background-color:#f8f8fb;
+  border: 2px solid #6c6c74;
+}
+.imag{
+  margin-left: 180px;
+}
+.heberger{
+  height: 700px;
+}
+.blor{
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #5e5e64;
+  height: 200px;
+  width: 230px;
+}
+.blor:hover{
+  background-color:#f8f8fb;
+  border: 2px solid #6c6c74;
+}
+
+.gallery{
+  background-color: #f8f8fb;
+  height: 900px;
+}
+.gal{
+  color: #005482;
+  background-color: #edf2f8;
+}
