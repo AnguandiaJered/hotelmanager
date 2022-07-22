@@ -1,4 +1,7 @@
 import React,{ Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../images/logo.png';
+
 
 const Footer = () =>{
     return(
@@ -7,26 +10,27 @@ const Footer = () =>{
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-md-3 ml-5 mt-5'>
-                            <h1 className='text-white'>Gold Star International Hotel</h1>
-                            <div className='text-white mt-3'>SubNetCongo vise à contribuer à la résolution des problèmes de la communauté 
-                                grâce à la TECHNOLOGIE et promouvoir l'intégrité de la jeunesse en appliquant la 
-                                technologie afin de permettre  l'émergence  de la société.
+                        <img  src={logo} alt="hotel manager" />                          
+                            <div className='text-white mt-3'>Un magnifique et admirable hotel construit par 
+                            Groupe d'architectes Internationaux,bien équipé d'un Standard International, 
+                            situé au Centre de la ville de Bunia, en Province de l'ITURI,Tourism in Dem. Rep. 
+                            of Congo.
                             </div>
                         </div>
                         <div className='col-md-2 ml-5 text-left mt-5'>
                             <h1 className='text-white'>Ressources</h1>
                             <ul className="list-unstyled mt-3">
-                                <li><a className='text-white' href='#'>A propos de nous</a></li> 
-                                <li><a className='text-white' href='#'>Nos Services</a></li> 
-                                <li><a className='text-white' href='#'>Nos projets</a></li> 
+                                <li><Link className='text-white' to='#'>A propos de nous</Link></li> 
+                                <li><Link className='text-white' to='/services'>Nos Services</Link></li> 
+                                <li><Link className='text-white' to='/gallery'>Galleries</Link></li> 
                             </ul>
                         </div>
                         <div className='col-md-2 ml-5 mt-5'>
                             <h1 className='text-white'>Support</h1>
                             <ul className="list-unstyled mt-3">
-                                <li><a className='text-white' href='#'>Contactez-nous</a></li>
-                                <li><a className='text-white' href='#'>Nos partenaires</a></li>
-                                <li><a  className='text-white' href='#'>Technologies</a></li>
+                                <li><Link className='text-white' to='#'>Contactez-nous</Link></li>
+                                <li><Link className='text-white' to='/reservation'>Reservation</Link></li>
+                                <li><Link  className='text-white' to='#'>Restaurant && Bars</Link></li>
                             </ul>
                         </div>
                         <div className='col-md-3 ml-5 mt-5'>
@@ -44,19 +48,16 @@ const Footer = () =>{
                         <div className='col-md-6 ml-5 mt-3 text-white'>
                             Copyright &copy;2022 Gold Star International Hotel. All rights reserved
                         </div>
-                        <div className='col-md-4 offset-1 mt-4'>
-                            <a href="#" class="col-md-3 text-white" target="_blank">
-                                <span id="spa" class="fa fa-github"></span>
-                            </a>
-                            <a href="#" class="col-md-4 text-white" target="_blank">
+                        <div className='col-md-4 offset-1 mt-4'>                          
+                            <Link to="#" class="col-md-4 text-white" target="_blank">
                                 <span id="spa" class="fa fa-twitter"></span>
-                            </a>
-                            <a href="#" class="col-md-4 text-white" target="_blank">
+                            </Link>
+                            <Link to="#" class="col-md-4 text-white" target="_blank">
                                 <span id="spa" class="fa fa-linkedin"></span>
-                            </a> 
-                            <a href="#" class="col-md-4 text-white" target="_blank">
+                            </Link> 
+                            <Link to='/https://www.facebook.com/GOLD-STARS-HOTEL-BUNIA-1724586261130510/' class="col-md-4 text-white" target="_blank">
                                 <span id="spa" class="fa fa-facebook"></span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

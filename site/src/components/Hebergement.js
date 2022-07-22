@@ -13,7 +13,7 @@ const Hebergement = () =>{
             <div className="container-fluid">
                 
                 <h1 className="text-center">Hebergement</h1>
-                <p className="text-center mt-3 col-md-10 offset-1"> VOUS offre plus de 42 chambres toutes catégories confortables
+                <p className="text-center mt-3 col-md-10 offset-1"> Vous offre plus de 42 chambres toutes catégories confortables
                  et luxueuses, avec un service plus flexible et distingué. Heure:24 heures. Enjoys the superior  geographical location and the Convenient transportation , 
                     adjacent to the conference  and Exhibition Center and Cultural activity, 
                     close to the central Market, in the heart of Bunia town, 

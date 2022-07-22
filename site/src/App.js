@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import {Services} from './components/Services';
 import {Gallery} from './components/Gallery';
+import {Reservation} from './components/Reservation';
 
 
 
@@ -17,8 +18,9 @@ function App() {
        <Navbar /> 
           <Switch>      
             <Route exact path='/' component={Home}/>    
-            <Route exact path='/services' component={Services}/>    
-            <Route exact path='/gallery' component={Gallery}/>    
+            <Route  path='/services' component={Services}/>    
+            <Route  path='/gallery' component={Gallery}/>    
+            <Route  path='/reservation' component={Reservation}/>    
             <Route component={ErrorPage} />
           </Switch>
           <Footer />

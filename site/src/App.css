@@ -86,7 +86,7 @@ hr {
   border-radius: 12px;
 }
 .owl-dot{
-  width: 10px;
+  /* width: 10px; */
   height: 10px;
   border-radius: 5px;
   background-color: #ddd !important;
@@ -139,4 +139,24 @@ hr {
 .gal{
   color: #005482;
   background-color: #edf2f8;
+}
+.reserve{
+  background-color: #f7f7fa;
+}
+.chambre{
+  background-color: #b5b5c0;
+  height: 700px;
+}
+.salle{
+  background-color: #e6f0f8;
+  height: 700px;
+}
+#spa{
+  font-size: 30px;
+}
+.nav-link{
+  color: #000f21!important;
+}
+.nav-link:hover{
+color: #c5933f!important;
 }

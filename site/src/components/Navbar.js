@@ -40,9 +40,9 @@ const Nav = () => {
                         <Link className='nav-link' to='/gallery'>Galery</Link>
                     </li>           
                 </ul>
-                <ul className="navbar-nav mr-auto mt-2 offset-2">
-                    <Link className='btn contact ' to='/contact'>Reservation</Link>
-                    <Link className='btn connect ml-3' to='/login'>Se connecter</Link>
+                <ul className="navbar-nav mr-auto mt-2 offset-3">
+                    <Link className='btn contact ' to='/reservation'>Reservation</Link>
+                    {/* <Link className='btn connect ml-3' to='/login'>Se connecter</Link> */}
                 </ul>  
             </nav>
           </Box>
