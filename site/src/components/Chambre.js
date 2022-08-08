@@ -17,76 +17,57 @@ export const Chambre = () =>{
                             <form>
                                 <div className='row'>
                                     <div className='col-md-6'>
-                                        <div className='form-group'>  
-                                        <InputLabel>Noms Clients</InputLabel>             
-                                            <Input type="text" placeholder= "Entrer les noms" 
+                                        <div className='form-group'> 
+                                            <InputLabel>Noms</InputLabel>                 
+                                            <Input type="text" placeholder='Noms complet' 
                                             className='form-control' 
-                                            name='noms'  
+                                            required/>               
+                                        </div> 
+                                        <div className='form-group'> 
+                                            <InputLabel>Chambres</InputLabel>                 
+                                            <select className='form-control' > 
+                                                <option value="">None</option>
+                                                <option value='M'>M</option>
+                                                <option value='F'>F</option>
+                                            </select>               
+                                        </div> 
+                                        <div className='form-group'> 
+                                            <InputLabel>Date Entrée</InputLabel>              
+                                            <Input type="date" 
+                                            className='form-control' 
                                             required/>
-                                        </div>
-                                        <div className='form-group'>  
-                                        <InputLabel>catégories chambre</InputLabel>                 
-                                            <select className='form-control' placeholder= "Classe chambre"
-                                            name='classe'> 
-                                                <option value="">None</option>
-                                                <option value='M'>M</option>
-                                                <option value='F'>F</option>
-                                            </select>               
-                                        </div>
-                                        <div className='form-group'>   
-                                        <InputLabel>Numero chambre</InputLabel>                
-                                            <select className='form-control' placeholder= "chambre"
-                                            name='classe'> 
-                                                <option value="">None</option>
-                                                <option value='M'>M</option>
-                                                <option value='F'>F</option>
-                                            </select>               
-                                        </div>
-                                        <div className='form-group'>  
-                                        <InputLabel>Date Entrée</InputLabel>                
-                                            <Input type="date" className='form-control' 
-                                            name='adresse' 
+                                        </div>                                     
+                                    </div>
+                                    <div className='col-md-6'> 
+                                        <div className='form-group'> 
+                                            <InputLabel>Date Sortie</InputLabel>              
+                                            <Input type="date" 
+                                            className='form-control' 
+                                            required/>
+                                        </div>                                                 
+                                        <div className='form-group'> 
+                                            <InputLabel>Detail de reservation</InputLabel>                
+                                            <Input type="text" placeholder='libelle' 
+                                            className='form-control' 
                                             required/>
                                         </div> 
-                                    </div> 
-                                    <div className='col-md-6'>                                  
-                                        <div className='form-group'>
-                                        <InputLabel>Date Sortie</InputLabel>                  
-                                            <Input type="date" className='form-control' 
-                                            name='adresse' 
-                                            required/>
-                                        </div>
                                         <div className='form-group'> 
-                                        <InputLabel>Libelle</InputLabel>                   
-                                            <Input type="text" placeholder='detail de la chambre' 
+                                            <InputLabel>Nombre de Jours</InputLabel>                
+                                            <Input type="number" placeholder='nombre de jour...' 
                                             className='form-control' 
-                                            name='mail' 
                                             required/>
                                         </div>
-                                        <div className='form-group'>
-                                        <InputLabel>Nombre de jour</InputLabel>                  
-                                            <Input type="number" placeholder='Nombre de jour' 
-                                            className='form-control' 
-                                            name='adresse' 
-                                            required/>
-                                        </div>
-                                        <div className='form-group'> 
-                                        <InputLabel>Provenance</InputLabel>                 
-                                            <Input type="text" placeholder='Provenance' 
-                                            className='form-control' 
-                                            name='adresse' 
-                                            required/>
-                                        </div>
+                                         
                                     </div>
                                 </div>
-                                <FormControl className='col-md-6'>                    
+                                <FormControl className='col-md-6'>
                                     <button className="btn btn-primary"   style={{marginRight:"10px"}}>Enregistrer </button>                    
                                 </FormControl>
-                            </form>
+                                </form>
                             </div>
                             <div className='col-md-5 mt-5 ml-5'>
-                                <img src={heberger} width={600} height={300} alt='hotel manager' />
-                                <img src={heberger2} width={600} height={300} className="mt-2" alt='hotel manager' />
+                                <img src={heberger} width={600} height={250} alt='hotel manager'className="heb" />
+                                <img src={heberger2} width={600} height={250} className="mt-2 heb" alt='hotel manager' />
                             </div>
                         </div>
                        

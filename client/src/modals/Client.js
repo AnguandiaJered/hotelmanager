@@ -21,10 +21,10 @@ const Client = (props) => {
         mail:"",
         datenaissance:"",
         profession:"",
-        photo:"",
+        images:"",
         id : new Date()
       });
-      const {noms,sexe,adresse,telephone,mail,datenaissance,profession,photo} = data;
+      const {noms,sexe,adresse,telephone,mail,datenaissance,profession,images} = data;
         const handleChange = e =>{
             setData({...data,[e.target.name] : e.target.value});
         }
@@ -141,8 +141,8 @@ const Client = (props) => {
                             <InputLabel>Photo</InputLabel>                  
                             <Input type="file" placeholder='image' 
                             className='form-control' 
-                            name='photo' 
-                            value={photo} 
+                            name='images' 
+                            value={images} 
                             onChange={e => handleChange(e)} required/>
                         </div>
                     </div>

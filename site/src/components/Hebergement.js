@@ -19,19 +19,19 @@ const Hebergement = () =>{
                     close to the central Market, in the heart of Bunia town, 
                     close to the Main Avenue (Boulevard de Liberation).</p>                
                
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div className="col-md-4">
-                            <img src={heberger} width={400} height={200} alt="Gold Stars Hotel" />
-                            <img src={heberger1} width={400} height={200} className="mt-3" alt="Gold Stars Hotel" />
+                            <img src={heberger} width={350} height={200} alt="Gold Stars Hotel" className="heb" />
+                            <img src={heberger1} width={350} height={200} className="mt-3 heb" alt="Gold Stars Hotel" />
                         </div>
                         <div className="col-md-4">
-                            <img src={heberger2} width={400} height={200} alt="Gold Stars Hotel" />
-                            <img src={heberger3} width={400} height={200} className="mt-3" alt="Gold Stars Hotel" />
+                            <img src={heberger2} width={350} height={200} alt="Gold Stars Hotel" className="heb"/>
+                            <img src={heberger3} width={350} height={200} className="mt-3 heb" alt="Gold Stars Hotel" />
                         </div>
                         <div className="col-md-4">
-                            <img src={heberger6} width={400} height={200} alt="Gold Stars Hotel" />
-                            <img src={heberger7} width={400} height={200} className="mt-3" alt="Gold Stars Hotel" />
+                            <img src={heberger6} width={350} height={200} alt="Gold Stars Hotel" className="heb"/>
+                            <img src={heberger7} width={350} height={200} className="mt-3 heb" alt="Gold Stars Hotel" />
                         </div>
                     </div>
                 </div>

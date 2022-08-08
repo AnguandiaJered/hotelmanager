@@ -42,7 +42,7 @@ const Reservationsalle = (props) => {
                 </Alert>}
             <form>
                 <div className='row'>
-                    <div className='col-md-6'>
+                    <div className='col-md-12'>
                         <div className='form-group'> 
                             <InputLabel>Clients</InputLabel>                 
                             <select className='form-control' 
@@ -55,7 +55,7 @@ const Reservationsalle = (props) => {
                             </select>               
                         </div> 
                         <div className='form-group'> 
-                            <InputLabel>Chambres</InputLabel>                 
+                            <InputLabel>Salles</InputLabel>                 
                             <select className='form-control' 
                             name='salle' 
                             value={salle} 
@@ -66,7 +66,7 @@ const Reservationsalle = (props) => {
                             </select>               
                         </div>                                  
                     </div>
-                    <div className='col-md-6'>                                                 
+                    <div className='col-md-12'>                                                 
                         <div className='form-group'> 
                             <InputLabel>Libelle</InputLabel>                
                             <Input type="text" placeholder='libelle' 
@@ -76,7 +76,7 @@ const Reservationsalle = (props) => {
                             onChange={e => handleChange(e)} required/>
                         </div> 
                         <div className='form-group'> 
-                            <InputLabel>Date Ceremonie</InputLabel>                
+                            <InputLabel>Date de Ceremonie</InputLabel>                
                             <Input type="date" 
                             className='form-control' 
                             name='dateceremonie' 

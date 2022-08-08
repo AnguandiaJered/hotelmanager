@@ -42,7 +42,7 @@ const Paiementroom = (props) => {
                 </Alert>}
             <form>
                 <div className='row'>
-                    <div className='col-md-6'>
+                    <div className='col-md-12'>
                         <div className='form-group'> 
                             <InputLabel>Reservation</InputLabel>                 
                             <select className='form-control' 
@@ -63,7 +63,7 @@ const Paiementroom = (props) => {
                             onChange={e => handleChange(e)} required/>
                         </div>                                          
                     </div>
-                    <div className='col-md-6'>                                                 
+                    <div className='col-md-12'>                                                 
                         <div className='form-group'> 
                             <InputLabel>Libelle</InputLabel>                
                             <Input type="text" placeholder='libelle' 

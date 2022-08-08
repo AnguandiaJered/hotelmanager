@@ -26,7 +26,7 @@ import garden from '../images/garden.jpg';
                                     </p> 
                             </div>                
                             <div className="col-md-3 mt-5">
-                                    <img src={home_slide1} alt="Gold stars hotel" width={700} height={400} />
+                                    <img src={home_slide1} alt="Gold stars hotel" className="heb" width={700} height={400} />
                                 </div>
                         </div>                        
                 </div> 

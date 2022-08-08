@@ -44,15 +44,15 @@ const Classe = (props) => {
                     <div className='col-md-12'>
                         <div className='form-group'> 
                             <InputLabel>Designation</InputLabel>              
-                            <Input type="number" placeholder= "Entrer le numero" 
+                            <Input type="text" placeholder= "Entrer la designation" 
                             className='form-control col-md-12' 
                             name='designation'  
                             value={designation}
                             onChange={e => handleChange(e)} required/>
                         </div>
                         <div className='form-group'>
-                            <InputLabel>Telephone</InputLabel>                   
-                            <Input type="tel" placeholder='phone numbre' 
+                            <InputLabel>Montant</InputLabel>                   
+                            <Input type="number" placeholder='montant' 
                             className='form-control col-md-12' 
                             name='montant' 
                             value={montant} 

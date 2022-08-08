@@ -1,6 +1,7 @@
 import React from "react";
 import {Chambre} from './Chambre'
-import {Salle} from './Salle'
+import {Salle} from './Salle';
+
 
 export const Reservation = () =>{
     return(
@@ -13,9 +14,9 @@ export const Reservation = () =>{
                  <p className="text-center mt-3 col-md-10 offset-1">NB: Nous vous  donnons la possibilité de reserver la 
                  chambre et la salle en ligne mais le paiement se passera sur place. 
                  En effet cette reservation sera expirée après 48 heures si le paiement n'est pas effectué.</p>
-                </div>
-            <Chambre/>
-            <Salle/>
+                </div>                          
+                <Chambre/>
+                <Salle/>
             </div>
        </>
     )

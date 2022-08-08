@@ -4,14 +4,14 @@ import { Edit, Search } from "@material-ui/icons";
 import { Toolbar, Fab, TextField, InputAdornment } from '@material-ui/core';
 import AddIcon from "@material-ui/icons/Add";
 import DeleteIcon from '@mui/icons-material/Delete';
-import { isEmpty } from "../pages/Utils";
-import Popup from '../pages/Popup';
+import { isEmpty } from "./Utils";
+import Popup from './Popup';
 import axios from 'axios';
 import Salle from "../modals/Salle";
 
 
-export const Salle = () =>{
-    const [openPopupClient, setOpenPopupClient] = useState(false)
+export const Salles = () =>{
+    const [openPopupChow, setOpenPopupChow] = useState(false)
     const [dataToSave, setDataToSave] = useState()
   
     const [openPopupModification, setOpenPopupModification] = useState(false)
@@ -25,14 +25,14 @@ export const Salle = () =>{
     const columns = [
      
         { field: 'designation', headerName: 'Designation', width: 250, editable: true },
-        { field: 'prix', headerName: 'Prix', width: 250, editable: true },    
+        { field: 'prix', headerName: 'Prix', width: 250, editable: true },
         { field: 'Action', headerName: 'Actions', width: 260, editable: true,
         renderCell : (params)=>{
           return(
             <>
               <span style={{marginLeft:"5px", cursor:"pointer"}} onClick={(e)=>{
                 setDataToSave(params.row)
-                openPopupClient(true)
+                openPopupChow(true)
               }}><span style={{marginLeft:"15px", cursor:"pointer"}} ><Edit color="primary"/> Modifier</span></span>
               <button className='btn' ><DeleteIcon color="secondary"/>Supprimer</button>
               </>
@@ -74,8 +74,22 @@ export const Salle = () =>{
   
 
   return (
-    <div className='dashboard container-fluid'>  
-            <Toolbar>
+    <div className='dashboard container-fluid'>
+        <div className="row">
+            <div className="col-lg-12">
+                <div className="page-title mt-3 ml-4">
+                    <h1 className="titre">Gold Stars International Hotel
+                        {/* <small className="ml-3">Ujuzi Tracking</small> */}
+                    </h1>
+                    <div className="container-fluid">
+                        <ol className="breadcrumb">
+                            <li className="active"><i className="fa fa-dashboard"></i> Dashboard / Salles</li>
+                        </ol>
+                    </div>                            
+                </div>
+            </div>
+        </div>
+        <Toolbar>
                 <TextField
                   style={{float:"right", marginLeft:"50px", width:"80%"}}
                   onChange={handleChange}
@@ -86,11 +100,12 @@ export const Salle = () =>{
                     </InputAdornment>)
                   }}
                   />
-                <Fab color="#c5933f!important" onClick={()=>setOpenPopupForm(true)} style={{marginLeft:"50px"}}>
+                  <Fab color="#c5933f!important" onClick={()=>setOpenPopupForm(true)} style={{marginLeft:"50px"}}>
                     <AddIcon/>
-                </Fab>                
+                  </Fab>                 
                   
-            </Toolbar>                 
+              </Toolbar> 
+                
         {
         !isEmpty(rows) &&
             <div style={{ height: 400, width: '100%', marginTop:"12px" }}>
@@ -113,8 +128,8 @@ export const Salle = () =>{
         </Popup>
         <Popup
         title={`Ajout de ${dataToSave && dataToSave.noms}`}
-        openPopup={openPopupClient}
-        setOpenPopup={setOpenPopupClient}
+        openPopup={openPopupChow}
+        setOpenPopup={setOpenPopupChow}
         >  
             <Salle data={dataToSave}/>
         </Popup>

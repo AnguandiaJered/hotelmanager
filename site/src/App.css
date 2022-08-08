@@ -145,7 +145,7 @@ hr {
 }
 .chambre{
   background-color: #b5b5c0;
-  height: 700px;
+  height: 600px;
 }
 .salle{
   background-color: #e6f0f8;
@@ -159,4 +159,7 @@ hr {
 }
 .nav-link:hover{
 color: #c5933f!important;
+}
+.heb{
+  border-radius: 5%;
 }

@@ -22,10 +22,10 @@ const Agent = (props) => {
         telephone:"",
         mail:"",
         fonction:"",
-        photo:"",
+        images:"",
         id : new Date()
       });
-      const {noms,sexe,datenaissance,adresse,etatcivil,telephone,mail,fonction,photo} = data;
+      const {noms,sexe,datenaissance,adresse,etatcivil,telephone,mail,fonction,images} = data;
         const handleChange = e =>{
             setData({...data,[e.target.name] : e.target.value});
         }
@@ -149,7 +149,7 @@ const Agent = (props) => {
                 <InputLabel>Photo</InputLabel>                 
                     <Input type="file" placeholder='image...' 
                     className='form-control' 
-                    name='photo' value={photo} 
+                    name='images' value={images} 
                     onChange={e => handleChange(e)} required/>
                 </div>
               </div>

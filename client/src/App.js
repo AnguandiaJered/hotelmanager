@@ -13,8 +13,7 @@ import {Reservationrooms} from './pages/Reservationrooms';
 import {Reservationsalles} from './pages/Reservationsalles';
 import {Paiementrooms} from './pages/Paiementrooms';
 import {Paiementsalles} from './pages/Paiementsalles';
-
-
+import {Salles} from './pages/Salles';
 
 
 function App() {
@@ -33,6 +32,7 @@ function App() {
             <Route path='/reservationsalle' component={Reservationsalles}/>
             <Route path='/paiementroom' component={Paiementrooms}/>
             <Route path='/paiementsalle' component={Paiementsalles}/>
+            <Route path='/salle' component={Salles}/>
             <Route component={ErrorPage} />
           </Switch>
       </Router>
