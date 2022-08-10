@@ -31,16 +31,16 @@ export const Clients = () =>{
         { field: 'mail', headerName: 'Mail', width: 200, editable: true },
         { field: 'datenaissance', headerName: 'Date naissance', width: 200, editable: true },
         { field: 'profession', headerName: 'Profession', width: 200, editable: true },
-        { field: 'photo', headerName: 'Photos', width: 200, editable: true },
+        { field: 'images', headerName: 'Photos', width: 200, editable: true },
         { field: 'Action', headerName: 'Actions', width: 260, editable: true,
         renderCell : (params)=>{
           return(
             <>
-              <span style={{marginLeft:"5px", cursor:"pointer"}} onClick={(e)=>{
+              <span style={{marginLeft:"15px", cursor:"pointer"}} onClick={(e)=>{
                 setDataToSave(params.row)
-                openPopupClient(true)
-              }}><span style={{marginLeft:"15px", cursor:"pointer"}} ><Edit color="primary"/> Modifier</span></span>
-              <button className='btn' ><DeleteIcon color="secondary"/>Supprimer</button>
+                openPopupAgent(true)
+              }}><span style={{marginLeft:"15px", cursor:"pointer"}} onClick={()=> Modification(params.row)}><Edit color="primary"/> Modifier</span></span>
+              <button className='btn' onClick={()=> deleteClient(params.row._id)}><DeleteIcon color="secondary"/>Supprimer</button>
               </>
           )
         }
@@ -50,18 +50,18 @@ export const Clients = () =>{
     const [openPopupForm, setOpenPopupForm] = useState(false)
     const [rows, setRows] = useState([])
     const [enregistrement, setEnregistrement] = useState()
-    // useEffect(()=>{
-    //   axios.get('http://localhost:8000/client')
-    //   .then(res =>{
-    //     setRows(res.data.client)
-    //   })
-    // },[enregistrement])
-    // const deleteClient = async (id) =>{
-    //   await axios.delete(`http://localhost:8000/client/${id}`)
-    //     .then((res)=>{
-    //       setRows(res.data);
-    //     })        
-    // };
+    useEffect(()=>{
+      axios.get('http://localhost:8000/client')
+      .then(res =>{
+        setRows(res.data.clients)
+      })
+    },[enregistrement])
+    const deleteClient = async (id) =>{
+      await axios.delete(`http://localhost:8000/client/${id}`)
+        .then((res)=>{
+          setRows(res.data);
+        })        
+    };
     console.log(rows)
 
     const [filterFn, setFilterFn] = useState({fn:items=>{return items;}})

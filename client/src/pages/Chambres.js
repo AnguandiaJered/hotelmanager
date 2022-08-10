@@ -31,11 +31,11 @@ export const Chambres = () =>{
         renderCell : (params)=>{
           return(
             <>
-              <span style={{marginLeft:"5px", cursor:"pointer"}} onClick={(e)=>{
+              <span style={{marginLeft:"15px", cursor:"pointer"}} onClick={(e)=>{
                 setDataToSave(params.row)
-                openPopupChow(true)
-              }}><span style={{marginLeft:"15px", cursor:"pointer"}} ><Edit color="primary"/> Modifier</span></span>
-              <button className='btn' ><DeleteIcon color="secondary"/>Supprimer</button>
+                openPopupAgent(true)
+              }}><span style={{marginLeft:"15px", cursor:"pointer"}} onClick={()=> Modification(params.row)}><Edit color="primary"/> Modifier</span></span>
+              <button className='btn' onClick={()=> deleteRooms(params.row._id)}><DeleteIcon color="secondary"/>Supprimer</button>
               </>
           )
         }
@@ -45,18 +45,18 @@ export const Chambres = () =>{
     const [openPopupForm, setOpenPopupForm] = useState(false)
     const [rows, setRows] = useState([])
     const [enregistrement, setEnregistrement] = useState()
-    // useEffect(()=>{
-    //   axios.get('http://localhost:8000/client')
-    //   .then(res =>{
-    //     setRows(res.data.client)
-    //   })
-    // },[enregistrement])
-    // const deleteClient = async (id) =>{
-    //   await axios.delete(`http://localhost:8000/client/${id}`)
-    //     .then((res)=>{
-    //       setRows(res.data);
-    //     })        
-    // };
+    useEffect(()=>{
+      axios.get('http://localhost:8000/room')
+      .then(res =>{
+        setRows(res.data.rooms)
+      })
+    },[enregistrement])
+    const deleteRooms = async (id) =>{
+      await axios.delete(`http://localhost:8000/room/${id}`)
+        .then((res)=>{
+          setRows(res.data);
+        })        
+    };
     console.log(rows)
 
     const [filterFn, setFilterFn] = useState({fn:items=>{return items;}})
@@ -67,7 +67,7 @@ export const Chambres = () =>{
           if(target.value === ""){
             return items
           }else{
-            return items.filter(x=> x.noms.includes(target.value))
+            return items.filter(x=> x.numroom.includes(target.value))
           }
           }
         })

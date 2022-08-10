@@ -31,7 +31,7 @@ export const Agents = () =>{
         { field: 'telephone', headerName: 'Telephone', width: 150, editable: true },
         { field: 'mail', headerName: 'Mail', width: 200, editable: true },
         { field: 'fonction', headerName: 'Fonction', width: 200, editable: true },
-        { field: 'photo', headerName: 'Photos', width: 200, editable: true },
+        { field: 'images', headerName: 'Images', width: 200, editable: true },
         { field: 'Action', headerName: 'Actions', width: 260, editable: true,
         renderCell : (params)=>{
           return(
@@ -39,8 +39,8 @@ export const Agents = () =>{
               <span style={{marginLeft:"15px", cursor:"pointer"}} onClick={(e)=>{
                 setDataToSave(params.row)
                 openPopupAgent(true)
-              }}><span style={{marginLeft:"15px", cursor:"pointer"}} ><Edit color="primary"/> Modifier</span></span>
-              <button className='btn' ><DeleteIcon color="secondary"/>Supprimer</button>
+              }}><span style={{marginLeft:"15px", cursor:"pointer"}} onClick={()=> Modification(params.row)}><Edit color="primary"/> Modifier</span></span>
+              <button className='btn' onClick={()=> deleteAgent(params.row._id)}><DeleteIcon color="secondary"/>Supprimer</button>
               </>
           )
         }
@@ -50,19 +50,19 @@ export const Agents = () =>{
     const [openPopupForm, setOpenPopupForm] = useState(false)
     const [rows, setRows] = useState([])
     const [enregistrement, setEnregistrement] = useState()
-    // useEffect(()=>{
-    //   axios.get('http://localhost:8000/agent')
-    //   .then(res =>{
-    //     setRows(res.data.agent)
-    //   })
-    // },[enregistrement])
-    // console.log(rows)
-    // const deleteAgent = async (id) =>{
-    //   await axios.delete(`http://localhost:8000/agent/${id}`)
-    //     .then((res)=>{
-    //       setRows(res.data);
-    //     })        
-    // };
+    useEffect(()=>{
+      axios.get('http://localhost:8000/agent')
+      .then(res =>{
+        setRows(res.data.agents)
+      })
+    },[enregistrement])
+    console.log(rows)
+    const deleteAgent = async (id) =>{
+      await axios.delete(`http://localhost:8000/agent/${id}`)
+        .then((res)=>{
+          setRows(res.data);
+        })        
+    };
     const [filterFn, setFilterFn] = useState({fn:items=>{return items;}})
     const handleChange =(e)=>{
       let target = e.target
